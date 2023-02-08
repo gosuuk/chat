@@ -1,0 +1,30 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title MEET
+        link(rel="stylesheet", href="/public/style.css")
+    body
+        header
+            h1 MEET
+        main
+            div#welcome
+                form    
+                    input(placeholder="방 이름", required, type="text")
+                    <div class="find-btn">
+                    button Enter room
+                    </div>
+            div#call
+                div#myStream
+                    <div class="onchat">
+                    video#myFace(autoplay,playsinline, width="400", height="400")
+                    <>&#x1F601;실시간 화상채팅<>
+                    video#peerFace(autoplay,playsinline, width="400", height="400")
+                    button#mute 소리 조절
+                    button#camera 캠 조절
+                    select#cameras
+                    </div>
+        script(src="/socket.io/socket.io.js")
+        script(src="/public/js/app.js")
